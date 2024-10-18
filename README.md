@@ -37,7 +37,7 @@ pip install numpy
 pip install spotipy
 ```
 
-### Project Execution Flow:
+### Project Execution Flow
 
 **Extract Data from API:**
 - The process begins with the extraction of data from Spotify's API using a Python script deployed on AWS Lambda. This script specifically targets Spotify's top playlists to gather data about tracks, albums, and artists.

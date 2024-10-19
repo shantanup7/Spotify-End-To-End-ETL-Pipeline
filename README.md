@@ -59,6 +59,22 @@ pip install spotipy
 - The transformation process includes cleaning, normalizing, and structuring the data according to the predefined schema that supports easier analysis and querying.
 After transformation, the cleaned data is loaded back into a different S3 bucket or folder designated for transformed data.
 
+![ER Diagram](https://github.com/shantanup7/Spotify-End-To-End-ETL-Pipeline/blob/main/Images/ER%20Diagram.jpeg)
+
 **Query using Athena:**
-- With the transformed data stored in S3 and cataloged using AWS Glue Crawler, it becomes queryable using Amazon Athena.
+- With the transformed data stored in S3 and catalogued using AWS Glue Crawler, it becomes queryable using Amazon Athena.
 Amazon Athena allows users to run SQL queries directly against the dataset stored in S3, providing insights into the music trends, popular tracks, artists, and albums from the Spotify playlists.
+
+**Visualization with Tableau**
+- **Connection Setup:** Tableau is connected to AWS Athena using the AWS Athena ODBC driver, enabling direct querying of the transformed data stored in S3. This setup integrates SQL capabilities with Tableau's advanced visualization tools for dynamic data analysis.
+
+  ![Tableau Dashboard](https://github.com/shantanup7/Spotify-End-To-End-ETL-Pipeline/blob/main/Images/BI%20Dashboard.jpg)
+
+- **Key Visualizations Include:**
+
+  - **Total Songs and Albums:** Displays visual overviews of the total number of songs and albums in the playlist.
+  - **Top 5 Popular Songs:** Charts that display the most popular songs within the playlist.
+  - **Least 5 Popular Songs:** Identifies tracks with the fewest plays to highlight potential areas for playlist optimization.
+  - **Artists with Most Songs:** Bar graphs showing which artists are most frequently featured in the playlist, highlighting key contributors.
+  - **Albums with Total Songs:** Bubble charts that illustrate albums with their corresponding number of songs, emphasizing prolific albums.
+  - **Top 10 Songs by Duration:** Bar charts ranking the longest songs by duration, useful for insights into content length and its reception.
